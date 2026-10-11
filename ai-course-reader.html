@@ -4,9 +4,9 @@
 <meta name="robots" content="noindex, nofollow, noarchive">
 <title>AI Ecosystem Course: Reading Copy</title>
 <style>
-:root{--s1:#1f6fd1;--s1t:#e3eefb;--s2:#c4510e;--s2t:#fcebdf;--s3:#8f192d;--s3t:#f7e1e4;--s4:#0f7c74;--s4t:#dcf1ef;--s0:#6b7280;--s0t:#f0f0f1;--son:#fff;
+:root{--s1:#1f6fd1;--s1t:#e3eefb;--s2:#d9a400;--s2t:#fbf0cc;--s2x:#8a6100;--s2on:#1f2328;--s3:#8f192d;--s3t:#f7e1e4;--s4:#0f7c74;--s4t:#dcf1ef;--s0:#6b7280;--s0t:#f0f0f1;--son:#fff;
 --bg:#faf8f5;--card:#fff;--ink:#1f2328;--muted:#6b7280;--line:#e7e2da;--accent:#2f6f5e;--accent2:#e8f2ee;--mark:#fff3c4;--code:#f4f1ec;--full:#2f6f5e;--short:#8a4fbf}
-@media (prefers-color-scheme:dark){:root{--s1:#76aef2;--s1t:#1c2a3d;--s2:#f59a5e;--s2t:#3a2618;--s3:#d9707e;--s3t:#3a1c21;--s4:#5fd0c6;--s4t:#173330;--s0:#9aa0a6;--s0t:#26292d;--son:#16181b;--bg:#16181b;--card:#1f2226;--ink:#e8e6e3;--muted:#9aa0a6;--line:#30343a;--accent:#7cc7ad;--accent2:#22332d;--mark:#4a4220;--code:#2a2d31;--full:#7cc7ad;--short:#c49be8}}
+@media (prefers-color-scheme:dark){:root{--s1:#76aef2;--s1t:#1c2a3d;--s2:#e8c04a;--s2t:#3a3115;--s2x:#e8c04a;--s2on:#16181b;--s3:#d9707e;--s3t:#3a1c21;--s4:#5fd0c6;--s4t:#173330;--s0:#9aa0a6;--s0t:#26292d;--son:#16181b;--bg:#16181b;--card:#1f2226;--ink:#e8e6e3;--muted:#9aa0a6;--line:#30343a;--accent:#7cc7ad;--accent2:#22332d;--mark:#4a4220;--code:#2a2d31;--full:#7cc7ad;--short:#c49be8}}
 *{box-sizing:border-box}
 html{scroll-padding-top:120px}
 body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}
@@ -22,10 +22,11 @@ header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px s
 .tabs button.s1{--c:var(--s1);--t:var(--s1t)}.tabs button.s2{--c:var(--s2);--t:var(--s2t)}.tabs button.s3{--c:var(--s3);--t:var(--s3t)}.tabs button.s4{--c:var(--s4);--t:var(--s4t)}.tabs button.s0{--c:var(--s0);--t:var(--s0t);border-style:dashed}
 .tabs button.sc{background:var(--t);border:2px solid var(--c);color:var(--ink)}
 .tabs button.sc.on{background:var(--c);color:var(--son);border-color:var(--c)}
+.tabs button.s2.on{color:var(--s2on)}
 .tabs button.split{border-color:transparent;background:linear-gradient(90deg,var(--at) 50%,var(--bt) 50%) padding-box,linear-gradient(90deg,var(--a) 50%,var(--b) 50%) border-box}
-.tabs button.split.on{border-color:transparent;background:linear-gradient(90deg,var(--a) 50%,var(--b) 50%) border-box}
+.tabs button.split.on{border:3px solid transparent;padding:8px 12px;color:var(--bg);background:linear-gradient(var(--ink),var(--ink)) padding-box,linear-gradient(90deg,var(--a) 50%,var(--b) 50%) border-box}
 .sess.s1{border-left:6px solid var(--s1)}.sess.s2{border-left:6px solid var(--s2)}.sess.s3{border-left:6px solid var(--s3)}.sess.s4{border-left:6px solid var(--s4)}.sess.s0{border-left:6px dashed var(--s0)}
-.sess.s1 .min.big{color:var(--s1)}.sess.s2 .min.big{color:var(--s2)}.sess.s3 .min.big{color:var(--s3)}.sess.s4 .min.big{color:var(--s4)}.sess.s0 .min.big{color:var(--s0)}
+.sess.s1 .min.big{color:var(--s1)}.sess.s2 .min.big{color:var(--s2x)}.sess.s3 .min.big{color:var(--s3)}.sess.s4 .min.big{color:var(--s4)}.sess.s0 .min.big{color:var(--s0)}
 .progress{height:4px;background:var(--accent);width:0;transition:width .1s}
 main{max-width:760px;margin:auto;padding:16px 14px 80px}
 .modhead{padding:6px 4px 14px}
