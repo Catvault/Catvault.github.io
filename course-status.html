@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Course Audit Status</title>
+<style>
+  :root {
+    --bg: #faf8f5;
+    --card: #ffffff;
+    --text: #1f1d1a;
+    --muted: #6b665e;
+    --line: #e6e1d8;
+    --done: #2f7a4f;
+    --done-bg: #e8f3ec;
+    --wait: #8a5a12;
+    --wait-bg: #fbf0dc;
+    --next: #2c4f8a;
+    --next-bg: #e6edf8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161513;
+      --card: #201f1c;
+      --text: #ece8e1;
+      --muted: #a29c92;
+      --line: #34322d;
+      --done: #7cc79a;
+      --done-bg: #1d2e24;
+      --wait: #e3b46a;
+      --wait-bg: #33291a;
+      --next: #8fb2ea;
+      --next-bg: #1c2638;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+  .eyebrow { color: var(--muted); font-size: 14px; letter-spacing: .04em; text-transform: uppercase; margin: 0 0 6px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 8px; }
+  .lede { color: var(--muted); margin: 0 0 32px; }
+  section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin: 0 0 16px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+  .done .tag { color: var(--done); background: var(--done-bg); }
+  .wait .tag { color: var(--wait); background: var(--wait-bg); }
+  .next .tag { color: var(--next); background: var(--next-bg); }
+  h2 { font-size: 20px; margin: 0 0 10px; }
+  ul { margin: 0; padding-left: 20px; }
+  li { margin: 6px 0; }
+  p { margin: 8px 0; }
+  code { font: 15px ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; }
+  .say { font-weight: 600; }
+  footer { color: var(--muted); font-size: 14px; margin-top: 28px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">AI Ecosystem Course</p>
+  <h1>Course audit: where it stands</h1>
+  <p class="lede">End of the fourth Fable session, 13 Oct 2026.</p>
+
+  <section class="done">
+    <span class="tag">Done</span>
+    <h2>Second audit, findings 1 to 3</h2>
+    <ul>
+      <li>The first boss admin move no longer depends on a step the timing note makes homework.</li>
+      <li>Obsidian Sync is now pre-work, because two steps need it.</li>
+      <li>Day 3 stays the long day. The opener now says so.</li>
+    </ul>
+    <p>Everything is on <code>main</code>. No branch is waiting to be merged.</p>
+  </section>
+
+  <section class="wait">
+    <span class="tag">Waiting for Opus</span>
+    <h2>Mechanical fixes, no questions needed</h2>
+    <ul>
+      <li>Five pointers still say "Module 03", which no longer exists.</li>
+      <li>The front matter of Module 08B and the opener's agenda are out of date.</li>
+      <li>Two pointers by number, and one version tag, that earlier passes missed.</li>
+      <li>Four spots still describe the Short course as it was before Gemini.</li>
+      <li>The 22 cost marks, filled from the opener's cost table.</li>
+    </ul>
+    <p>The file <code>HANDOFF.md</code> explains all of this under "Start here, Opus".</p>
+  </section>
+
+  <section class="wait">
+    <span class="tag">Waiting for Annie, later</span>
+    <h2>The Module 08B test run</h2>
+    <p>Run it on a fresh server, from Hong Kong, with no VPN.</p>
+  </section>
+
+  <section class="next">
+    <span class="tag">Your next step</span>
+    <h2>Nothing more from you today</h2>
+    <p>Hand the repo to Opus. Opus starts from <code>HANDOFF.md</code>.</p>
+    <p>If you would rather Fable clears the four mechanical fixes now, tell Fable: <span class="say">"do 4 to 7"</span>.</p>
+  </section>
+
+  <footer>Source: the course-audit repo, <code>HANDOFF.md</code> and <code>AUDIT.md</code>.</footer>
+</main>
+</body>
+</html>
