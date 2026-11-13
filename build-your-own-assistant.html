@@ -66,10 +66,10 @@ a { color: var(--accent-deep); }
 
 /* demo band: its own colours, set by redefining the tokens inside it */
 .band {
-  --paper: #F3EFE8; --paper-deep: #EAE3D7; --card: #FBFAF6; --ink: #15281F; --ink-soft: #566B60; --line: #E0DBD1;
+  --paper: #F3EFE8; --paper-deep: #EAE3D7; --card: #FBFAF6; --ink: #15281F; --ink-soft: #4F6358; --line: #E0DBD1;
   background: #EAE3D7; color: var(--ink); padding-block: 44px 48px;
 }
-.band .eyebrow { color: #A05422; }
+.band .eyebrow { color: #8F4A1C; }
 .band h2 { font-size: clamp(2rem, 6vw, 3rem); }
 .band .brandnote { display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--ink-soft); flex-wrap: wrap; }
 .band .brandnote i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; }
@@ -81,7 +81,7 @@ a { color: var(--accent-deep); }
 .bubble { background: #FBFAF6; color: var(--ink); border-radius: 16px 16px 16px 4px; padding: 10px 12px; font-size: 0.85rem; line-height: 1.45; display: grid; gap: 6px; }
 .bubble p { margin: 0; }
 .bubble .b-head { font-family: var(--serif); font-size: 1.25rem; line-height: 1.15; }
-.bubble.me { background: #D47535; color: #fff; border-radius: 16px 16px 4px 16px; justify-self: end; max-width: 85%; }
+.bubble.me { background: #D47535; color: #15281F; font-weight: 500; border-radius: 16px 16px 4px 16px; justify-self: end; max-width: 85%; }
 .bubble.new, .filed li.new, .pane.new { animation: pop .3s ease-out; }
 @keyframes pop { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 .say { display: grid; gap: 8px; border-top: 1px solid rgba(220,230,224,0.25); padding-top: 12px; margin-top: 2px; }
@@ -95,7 +95,7 @@ a { color: var(--accent-deep); }
 .tabs button { font-family: var(--sans); font-size: 0.88rem; font-weight: 600; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
 .tabs button[aria-selected="true"] { background: #234D3A; border-color: #234D3A; color: #F8F6F1; }
 .tabs button[hidden] { display: none; }
-.tabs .add { background: transparent; border: 1.5px dashed #D47535; color: #A05422; }
+.tabs .add { background: #FBFAF6; border: 1.5px dashed #D47535; color: #8F4A1C; }
 .pane { display: grid; gap: 14px; }
 .pane[hidden] { display: none; }
 .tile { background: var(--card); border-radius: 20px; padding: 18px 20px; box-shadow: 0 1px 0 rgba(21,40,31,0.04), 0 8px 22px rgba(21,40,31,0.06); min-width: 0; }
@@ -103,7 +103,7 @@ a { color: var(--accent-deep); }
 .tile-top h3 { font-size: 1rem; }
 .chip { font-size: 0.7rem; font-weight: 600; color: var(--ink-soft); background: var(--paper-deep); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
 .now { background: #D47535; border-radius: 20px; padding: 16px 18px; display: grid; gap: 10px; }
-.now-label { color: #fff; font-weight: 700; font-size: 0.85rem; }
+.now-label { color: #15281F; font-weight: 700; font-size: 0.85rem; }
 .now .three li { background: #FBFAF6; }
 .three { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .three li { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; background: var(--paper); border-radius: 14px; padding: 12px 14px; transition: opacity .25s; }
@@ -215,7 +215,7 @@ a { color: var(--accent-deep); }
 <main>
 
   <header class="col hero">
-    <div class="eyebrow">A small-group course · By invitation</div>
+    <div class="eyebrow">A small-group course · By&nbsp;invitation</div>
     <h1>I built my own AI assistant. <em>Come build yours.</em></h1>
     <p class="lede">It plans my day and does the admin I used to hate. <strong>I work in sales, not engineering.</strong></p>
     <a class="go" href="#demo">Try the demo <span aria-hidden="true">↓</span></a>
@@ -250,12 +250,12 @@ a { color: var(--accent-deep); }
         </div>
 
         <div class="board">
-          <div class="tabs" role="tablist">
+          <div class="tabs"><div role="tablist" style="display:contents">
             <button role="tab" aria-selected="true" data-tab="today">☀️ Today</button>
             <button role="tab" aria-selected="false" data-tab="work">💼 Work</button>
             <button role="tab" aria-selected="false" data-tab="family">🏡 Family</button>
             <button role="tab" aria-selected="false" data-tab="money">💰 Money</button>
-            <button role="tab" aria-selected="false" data-tab="trip" id="trip-tab" hidden>✈️ Italy trip</button>
+            <button role="tab" aria-selected="false" data-tab="trip" id="trip-tab" hidden>✈️ Italy trip</button></div>
             <button type="button" class="add" id="add-section">+ Add a section</button>
           </div>
 
@@ -435,7 +435,7 @@ a { color: var(--accent-deep); }
         <div class="card"><span class="e" aria-hidden="true">🧠</span><h3>It works your way</h3><p>It is customised to how you think and work. You write its rules.</p></div>
         <div class="card"><span class="e" aria-hidden="true">✈️</span><h3>It changes when your life does</h3><p>Planning a three-week trip? Add a section for it. Remove it when you are home.</p></div>
         <div class="card"><span class="e" aria-hidden="true">🧩</span><h3>You are not stuck with it</h3><p>An app gives everyone the same features. Yours does exactly what you ask for.</p></div>
-        <div class="card"><span class="e" aria-hidden="true">🔒</span><h3>It is private</h3><p>It reads only what you allow. Your files stay on your own server.</p></div>
+        <div class="card"><span class="e" aria-hidden="true">🔒</span><h3>You decide what it sees</h3><p>Your files live on your own server. You choose what the AI can see.</p></div>
       </div>
     </section>
 
