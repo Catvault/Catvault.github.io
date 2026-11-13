@@ -187,6 +187,7 @@ a { color: var(--accent-deep); }
 .sessions .n { font-family: var(--serif); font-size: 2.5rem; font-weight: 600; color: var(--accent); line-height: 1; }
 .sessions p { font-size: 0.95rem; color: var(--ink-soft); }
 .sessions .hold { color: var(--sun-deep); font-weight: 600; font-size: 0.88rem; }
+.sessions .leave { color: var(--accent-deep); font-weight: 600; font-size: 0.88rem; }
 .facts { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
 .facts li { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 9px 18px; font-size: 0.95rem; font-weight: 500; }
 
@@ -198,6 +199,7 @@ a { color: var(--accent-deep); }
 
 .close { background: var(--sun-wash); border-radius: 28px; padding: clamp(32px, 7vw, 64px); display: grid; gap: 18px; }
 .close p { font-size: clamp(1.1rem, 3.2vw, 1.3rem); }
+.close .ask { margin-top: 6px; padding-top: 20px; border-top: 1px solid rgba(35,39,42,0.14); font-family: var(--serif); font-weight: 600; font-size: clamp(1.3rem, 4.4vw, 1.85rem); line-height: 1.25; color: var(--accent-deep); text-wrap: balance; max-width: 34ch; }
 
 @media (max-width: 820px) {
   .demo { grid-template-columns: minmax(0, 1fr); }
@@ -231,7 +233,7 @@ a { color: var(--accent-deep); }
       <div class="band-head">
         <div class="eyebrow">Tap around</div>
         <h2 id="demo-title">7am. Your day is already sorted.</h2>
-        <p class="brandnote">Your assistant can look however you like.</p>
+        <p class="brandnote">Your assistant can look however you like. Yours is built around your own day.</p>
       </div>
 
       <div class="demo">
@@ -344,8 +346,8 @@ a { color: var(--accent-deep); }
         <h2>Get your time and mental energy back.</h2>
       </div>
       <div class="grid">
-        <div class="card"><span class="e" aria-hidden="true">💬</span><h3>Time for people</h3><p>Real conversations, not task messages.</p></div>
-        <div class="card"><span class="e" aria-hidden="true">🔭</span><h3>Room to think bigger</h3><p>Plan the projects you keep putting off.</p></div>
+        <div class="card"><span class="e" aria-hidden="true">💬</span><h3>Time for people</h3><p>Real conversations, not task messages. The people you love get you back, not your to-do list.</p></div>
+        <div class="card"><span class="e" aria-hidden="true">🔭</span><h3>Room to think bigger</h3><p>The projects you keep putting off finally get a slot.</p></div>
         <div class="card"><span class="e" aria-hidden="true">🚦</span><h3>Nobody waits on you</h3><p>Jobs that need you come first, so nobody is stuck.</p></div>
       </div>
     </section>
@@ -370,7 +372,7 @@ a { color: var(--accent-deep); }
           <span class="big">Your voice. Your judgement. The final yes.</span>
         </div>
       </div>
-      <p class="pa">It works like a good PA. It does the admin, checks in with you, and waits for your approval.</p>
+      <p class="pa">It works like a good PA. It does the admin, checks in with you, and waits for your approval. So you stop being the one who has to remember everything.</p>
       <div class="ratio">
         <div class="bar" aria-hidden="true"><i></i><i></i></div>
         <ul class="legend">
@@ -437,10 +439,10 @@ a { color: var(--accent-deep); }
         <h2>It is made for you, and you can change it any time.</h2>
       </div>
       <div class="grid two">
-        <div class="card"><span class="e" aria-hidden="true">🧠</span><h3>It works your way</h3><p>It is customised to how you think and work. You write its rules.</p></div>
+        <div class="card"><span class="e" aria-hidden="true">🧠</span><h3>It works your way</h3><p>You write its rules, so it fits how you already think and work. Nothing new to learn.</p></div>
         <div class="card"><span class="e" aria-hidden="true">✈️</span><h3>It changes when your life does</h3><p>Planning a three-week trip? Add a section for it. Remove it when you are home.</p></div>
         <div class="card"><span class="e" aria-hidden="true">🧩</span><h3>You are not stuck with it</h3><p>An app gives everyone the same features. Yours does exactly what you ask for.</p></div>
-        <div class="card"><span class="e" aria-hidden="true">🔒</span><h3>You decide what it sees</h3><p>Your files live on your own server. You choose what the AI can see.</p></div>
+        <div class="card"><span class="e" aria-hidden="true">🔒</span><h3>You decide what it sees</h3><p>Your files live on your own server, and you choose what the AI can see. So you can use it for the things you would never paste into a chat box.</p></div>
       </div>
     </section>
 
@@ -451,7 +453,7 @@ a { color: var(--accent-deep); }
       </div>
       <div class="grid worries">
         <div class="card"><h3>“My to-do list never ends.”</h3><p>You don't need to be organised first.</p></div>
-        <div class="card"><h3>“It's all still in my head.”</h3><p>Writing it down is session 3.</p></div>
+        <div class="card"><h3>“It's all still in my head.”</h3><p>It moves out of your head and into the bot. Writing it down is session 3.</p></div>
         <div class="card"><h3>“I'm not technical.”</h3><p>Neither am I. I do the fiddly parts with you.</p></div>
       </div>
     </section>
@@ -462,12 +464,12 @@ a { color: var(--accent-deep); }
         <h2>Six sessions. By the last one, your assistant is on your phone.</h2>
       </div>
       <ol class="sessions">
-        <li><span class="n">1</span><h3>What works in Hong Kong</h3><p>Tools and data privacy.</p><p class="hold">Buy nothing before this.</p></li>
-        <li><span class="n">2</span><h3>Sketch your system</h3><p>See mine live. Draw yours.</p></li>
-        <li><span class="n">3</span><h3>Your work on paper</h3><p>List the tasks you repeat.</p></li>
-        <li><span class="n">4</span><h3>Your first build</h3><p>Write its rules. Build one real job.</p></li>
-        <li><span class="n">5</span><h3>On your phone</h3><p>Your own server and chat bot.</p></li>
-        <li><span class="n">6</span><h3>Keeping it working</h3><p>Spot problems early. Add jobs.</p></li>
+        <li><span class="n">1</span><h3>What works in Hong Kong</h3><p>Tools and data privacy.</p><p class="hold">Buy nothing before this.</p><p class="leave">You leave with: the right tools for Hong Kong.</p></li>
+        <li><span class="n">2</span><h3>Sketch your system</h3><p>See mine live, then draw yours.</p><p class="leave">You leave with: your system on one page.</p></li>
+        <li><span class="n">3</span><h3>Your work on paper</h3><p>List the tasks you repeat.</p><p class="leave">You leave with: the jobs you are about to hand over.</p></li>
+        <li><span class="n">4</span><h3>Your first build</h3><p>Write its rules. Build one real job.</p><p class="leave">You leave with: one job already running.</p></li>
+        <li><span class="n">5</span><h3>On your phone</h3><p>Your own server and chat bot.</p><p class="leave">You leave with: your assistant in your pocket.</p></li>
+        <li><span class="n">6</span><h3>Keeping it working</h3><p>Spot problems early. Add jobs.</p><p class="leave">You leave with: an assistant that keeps working after the course.</p></li>
       </ol>
       <ul class="facts">
         <li>3 or 4 people, learning together</li>
@@ -496,7 +498,9 @@ a { color: var(--accent-deep); }
 
     <section class="close" id="from-me">
       <h2>Stop keeping all the details in your head.</h2>
-      <p>I'm Annie. I built mine with Claude. No coding needed. If I can build this, you can.</p>
+      <p>Build a bot instead. Six sessions, and it does the admin you have been carrying around: claims filed, clashes caught, the right thing in front of you at 7am.</p>
+      <p>I'm Annie. I built mine with Claude. No coding needed, and I do the fiddly parts with you.</p>
+      <p class="ask">What's the one admin job you'd like to offload? Let's start there.</p>
     </section>
 
   </div>
