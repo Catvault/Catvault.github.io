@@ -12,7 +12,8 @@
 <style>
 /* Layout: short hero, then the live demo as a wide band, then one idea per section in a centred 880px column.
    Type: Noto Serif Display (semibold, upright, never italic) for headings and DM Sans for everything else, both loaded as web fonts.
-   Light only. Warm off-white paper, charcoal ink, one teal accent, slate for quiet text and one ochre second colour (sun). The demo band uses the same colours. */
+   Light only. Warm off-white paper, charcoal ink, one teal accent, slate for quiet text and one ochre second colour (sun). The demo band uses the same colours.
+   The hero's second sentence sits in the deep teal at 700 so it reads as a separate promise from the serif line above it. */
 :root {
   --paper: #F7F5F0;
   --paper-deep: #ECE8E0;
@@ -49,7 +50,7 @@ body {
 .band-inner { max-width: 1120px; }
 h1, h2 { font-family: var(--serif); font-weight: 600; text-wrap: balance; margin: 0; }
 h1 { font-size: clamp(2.3rem, 8.2vw, 4.4rem); line-height: 1.08; letter-spacing: -0.01em; }
-h1 .sub { display: block; margin-top: 0.75em; font-family: var(--sans); font-weight: 500; font-size: clamp(1.2rem, 4.2vw, 1.65rem); line-height: 1.3; letter-spacing: -0.01em; }
+h1 .sub { display: block; margin-top: 0.75em; font-family: var(--sans); font-weight: 700; font-size: clamp(1.2rem, 4.2vw, 1.65rem); line-height: 1.3; letter-spacing: -0.005em; color: var(--accent-deep); }
 h2 { font-size: clamp(1.85rem, 6vw, 2.9rem); line-height: 1.14; letter-spacing: -0.005em; }
 h3 { font-family: var(--sans); font-weight: 600; font-size: 1.1rem; line-height: 1.3; letter-spacing: -0.01em; margin: 0; }
 p { margin: 0; max-width: 56ch; }
