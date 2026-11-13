@@ -61,6 +61,10 @@ a { color: var(--accent-deep); }
 
 /* hero */
 .hero { display: grid; gap: 22px; padding-block: 64px 44px; }
+.wins { list-style: none; margin: 6px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 12px 22px; font-size: clamp(1.1rem, 3.3vw, 1.25rem); font-weight: 600; line-height: 1.3; letter-spacing: -0.01em; }
+.wins li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; }
+.wins li::before { content: "✓"; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-size: 0.85rem; font-weight: 700; }
+.lede { max-width: 52ch; }
 .go { justify-self: start; display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1rem; text-decoration: none; background: var(--ink); color: #fff; border-radius: 999px; padding: 14px 26px; transition: background .2s; }
 .go:hover { background: var(--accent); }
 
@@ -217,7 +221,12 @@ a { color: var(--accent-deep); }
   <header class="col hero">
     <div class="eyebrow">A small-group course · By&nbsp;invitation</div>
     <h1>I built my own AI assistant. <em>Come build yours.</em></h1>
-    <p class="lede">It plans my day and does the admin I used to hate. <strong>More energy for big decisions. More time with my family.</strong> I'm a working mom in sales, with no technical background.</p>
+    <ul class="wins">
+      <li>Your admin, done for you.</li>
+      <li>More time for people and big decisions.</li>
+      <li>Your own assistant on your phone in six sessions.</li>
+    </ul>
+    <p class="lede">I'm a working mom in sales, with no technical background. Mine plans my day and does the admin I used to hate.</p>
     <a class="go" href="#demo">Try the demo <span aria-hidden="true">↓</span></a>
   </header>
 
@@ -333,6 +342,18 @@ a { color: var(--accent-deep); }
 
   <div class="col story">
 
+    <section id="opens">
+      <div class="head">
+        <div class="eyebrow">What you get</div>
+        <h2>Your assistant does the admin. You get your time back.</h2>
+      </div>
+      <div class="grid">
+        <div class="card"><span class="e" aria-hidden="true">💬</span><h3>Time for people</h3><p>Real conversations, not task messages.</p></div>
+        <div class="card"><span class="e" aria-hidden="true">🔭</span><h3>Room to think bigger</h3><p>Plan the projects you keep putting off.</p></div>
+        <div class="card"><span class="e" aria-hidden="true">🚦</span><h3>Nobody waits on you</h3><p>Jobs that need you come first, so nobody is stuck.</p></div>
+      </div>
+    </section>
+
     <section class="split" id="belief">
       <div class="head">
         <div class="eyebrow">What AI is for</div>
@@ -411,18 +432,6 @@ a { color: var(--accent-deep); }
           <span class="big">Does the whole job.</span>
           <p>It asks you only when the decision is yours.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="opens">
-      <div class="head">
-        <div class="eyebrow">What you get</div>
-        <h2>Your assistant does the admin. You get your time back.</h2>
-      </div>
-      <div class="grid">
-        <div class="card"><span class="e" aria-hidden="true">💬</span><h3>Time for people</h3><p>Real conversations, not task messages.</p></div>
-        <div class="card"><span class="e" aria-hidden="true">🔭</span><h3>Room to think bigger</h3><p>Plan the projects you keep putting off.</p></div>
-        <div class="card"><span class="e" aria-hidden="true">🚦</span><h3>Nobody waits on you</h3><p>Jobs that need you come first, so nobody is stuck.</p></div>
       </div>
     </section>
 
