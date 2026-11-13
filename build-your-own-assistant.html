@@ -8,29 +8,29 @@
 <meta name="description" content="Your energy belongs to the big decisions. Build an assistant for the small ones. A small-group course, by invitation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+Display:wght@500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+Display:wght@600&display=swap">
 <style>
 /* Layout: short hero, then the live demo as a wide band, then one idea per section in a centred 880px column.
    Type: Noto Serif Display (semibold, upright, never italic) for headings and DM Sans for everything else, both loaded as web fonts.
-   Light only. Navy ink, one blue accent and one warm second colour (sun). The demo band uses the same colours. */
+   Light only. Warm off-white paper, charcoal ink, one teal accent, slate for quiet text and one ochre second colour (sun). The demo band uses the same colours. */
 :root {
-  --paper: #FCFCFA;
-  --paper-deep: #F1F2F5;
+  --paper: #F7F5F0;
+  --paper-deep: #ECE8E0;
   --card: #FFFFFF;
-  --ink: #131A2A;
-  --ink-soft: #566079;
-  --accent: #2456E6;
-  --accent-deep: #1B3FB0;
-  --accent-wash: #E8EEFF;
-  --sun: #F5B93E;
-  --sun-deep: #8A5A00;
-  --sun-wash: #FFF3D4;
-  --green: #1E7A4C;
-  --green-wash: #E4F4EA;
-  --line: #E5E7EE;
+  --ink: #23272A;
+  --ink-soft: #4A6072;
+  --accent: #2E7D7B;
+  --accent-deep: #1F5E5C;
+  --accent-wash: #DDEBE9;
+  --sun: #D49B35;
+  --sun-deep: #7A4F00;
+  --sun-wash: #F8ECD2;
+  --slate: #41586B;
+  --slate-wash: #E1E8ED;
+  --line: #DFDAD0;
   --serif: "Noto Serif Display", Georgia, "Times New Roman", serif;
   --sans: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --shadow: 0 1px 2px rgba(19,26,42,0.04), 0 12px 32px rgba(19,26,42,0.06);
+  --shadow: 0 1px 2px rgba(35,39,42,0.04), 0 12px 32px rgba(35,39,42,0.06);
   color-scheme: light;
 }
 * { box-sizing: border-box; }
@@ -49,7 +49,7 @@ body {
 .band-inner { max-width: 1120px; }
 h1, h2 { font-family: var(--serif); font-weight: 600; text-wrap: balance; margin: 0; }
 h1 { font-size: clamp(2.3rem, 8.2vw, 4.4rem); line-height: 1.08; letter-spacing: -0.01em; }
-h1 em { font-style: normal; color: var(--accent); }
+h1 .sub { display: block; margin-top: 0.75em; font-family: var(--sans); font-weight: 500; font-size: clamp(1.2rem, 4.2vw, 1.65rem); line-height: 1.3; letter-spacing: -0.01em; }
 h2 { font-size: clamp(1.85rem, 6vw, 2.9rem); line-height: 1.14; letter-spacing: -0.005em; }
 h3 { font-family: var(--sans); font-weight: 600; font-size: 1.1rem; line-height: 1.3; letter-spacing: -0.01em; margin: 0; }
 p { margin: 0; max-width: 56ch; }
@@ -70,68 +70,68 @@ a { color: var(--accent-deep); }
 
 /* demo band: its own colours, set by redefining the tokens inside it */
 .band {
-  --paper: #F4F6FA; --paper-deep: #E9EDF5; --card: #FFFFFF; --ink: #131A2A; --ink-soft: #55607A; --line: #DDE2EC;
-  background: #E9EDF5; color: var(--ink); padding-block: 44px 48px;
+  --paper: #F7F5F0; --paper-deep: #EFECE5; --card: #FFFFFF; --ink: #23272A; --ink-soft: #4A6072; --line: #D9D3C8;
+  background: #E8E4DC; color: var(--ink); padding-block: 44px 48px;
 }
 .band .eyebrow { color: #7A4F00; }
 .band h2 { font-size: clamp(1.7rem, 5.2vw, 2.5rem); }
 .band .brandnote { font-size: 1.125rem; color: var(--ink-soft); }
 .band-head { display: grid; gap: 10px; margin-bottom: 26px; }
 .demo { display: grid; grid-template-columns: minmax(0, 310px) minmax(0, 1fr); gap: 22px; align-items: start; }
-.phone { background: #131A2A; border-radius: 30px; padding: 16px 14px 18px; display: grid; gap: 10px; box-shadow: 0 18px 40px rgba(19,26,42,0.28); }
-.phone-top { display: flex; justify-content: space-between; color: #DCE3F2; font-size: 0.78rem; padding: 0 6px 4px; }
+.phone { background: #23272A; border-radius: 30px; padding: 16px 14px 18px; display: grid; gap: 10px; box-shadow: 0 18px 40px rgba(35,39,42,0.28); }
+.phone-top { display: flex; justify-content: space-between; color: #E6E4DE; font-size: 0.78rem; padding: 0 6px 4px; }
 .thread { display: grid; gap: 10px; }
 .bubble { background: #FFFFFF; color: var(--ink); border-radius: 16px 16px 16px 4px; padding: 10px 12px; font-size: 0.85rem; line-height: 1.45; display: grid; gap: 6px; }
 .bubble p { margin: 0; }
 .bubble .b-head { font-size: 1rem; font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; }
-.bubble.me { background: #F5B93E; color: #131A2A; font-weight: 500; border-radius: 16px 16px 4px 16px; justify-self: end; max-width: 85%; }
+.bubble.me { background: #D49B35; color: #23272A; font-weight: 500; border-radius: 16px 16px 4px 16px; justify-self: end; max-width: 85%; }
 .bubble.new, .filed li.new, .pane.new { animation: pop .3s ease-out; }
 @keyframes pop { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-.say { display: grid; gap: 8px; border-top: 1px solid rgba(220,227,242,0.25); padding-top: 12px; margin-top: 2px; }
-.say-label { color: #DCE3F2; font-size: 0.78rem; font-weight: 600; padding-left: 4px; }
-.say button { font-family: var(--sans); font-size: 0.83rem; font-weight: 500; text-align: left; line-height: 1.35; background: transparent; color: #FFFFFF; border: 1.5px dashed #F5B93E; border-radius: 14px; padding: 9px 12px; cursor: pointer; }
-.say button:hover { background: rgba(245,185,62,0.18); }
+.say { display: grid; gap: 8px; border-top: 1px solid rgba(230,228,222,0.25); padding-top: 12px; margin-top: 2px; }
+.say-label { color: #E6E4DE; font-size: 0.78rem; font-weight: 600; padding-left: 4px; }
+.say button { font-family: var(--sans); font-size: 0.83rem; font-weight: 500; text-align: left; line-height: 1.35; background: transparent; color: #FFFFFF; border: 1.5px dashed #D49B35; border-radius: 14px; padding: 9px 12px; cursor: pointer; }
+.say button:hover { background: rgba(212,155,53,0.18); }
 .say button[disabled] { display: none; }
 .say.empty { display: none; }
 .board { display: grid; gap: 14px; min-width: 0; }
 .tabs { display: flex; flex-wrap: wrap; gap: 6px; }
 .tabs button { font-family: var(--sans); font-size: 0.88rem; font-weight: 600; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
-.tabs button[aria-selected="true"] { background: #1B2A4A; border-color: #1B2A4A; color: #FFFFFF; }
+.tabs button[aria-selected="true"] { background: #1F5E5C; border-color: #1F5E5C; color: #FFFFFF; }
 .tabs button[hidden] { display: none; }
-.tabs .add { background: #FFFFFF; border: 1.5px dashed #8A5A00; color: #7A4F00; }
+.tabs .add { background: #FFFFFF; border: 1.5px dashed #7A4F00; color: #7A4F00; }
 .pane { display: grid; gap: 14px; }
 .pane[hidden] { display: none; }
-.tile { background: var(--card); border-radius: 20px; padding: 18px 20px; box-shadow: 0 1px 0 rgba(19,26,42,0.04), 0 8px 22px rgba(19,26,42,0.06); min-width: 0; }
+.tile { background: var(--card); border-radius: 20px; padding: 18px 20px; box-shadow: 0 1px 0 rgba(35,39,42,0.04), 0 8px 22px rgba(35,39,42,0.06); min-width: 0; }
 .tile-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
 .tile-top h3 { font-size: 1rem; }
 .chip { font-size: 0.7rem; font-weight: 600; color: var(--ink-soft); background: var(--paper-deep); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
-.now { background: #F5B93E; border-radius: 20px; padding: 16px 18px; display: grid; gap: 10px; }
-.now-label { color: #131A2A; font-weight: 700; font-size: 0.85rem; }
+.now { background: #D49B35; border-radius: 20px; padding: 16px 18px; display: grid; gap: 10px; }
+.now-label { color: #23272A; font-weight: 700; font-size: 0.85rem; }
 .now .three li { background: #FFFFFF; }
 .three { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .three li { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; background: var(--paper); border-radius: 14px; padding: 12px 14px; transition: opacity .25s; }
 .three .t { font-size: 0.93rem; font-weight: 600; line-height: 1.35; min-width: 0; }
 .three .s { display: block; font-size: 0.78rem; font-weight: 400; color: var(--ink-soft); }
-.tick { width: 34px; height: 34px; border-radius: 50%; border: 2px solid #1B2A4A; background: var(--card); cursor: pointer; display: grid; place-items: center; color: transparent; font-size: 0.95rem; padding: 0; }
+.tick { width: 34px; height: 34px; border-radius: 50%; border: 2px solid #1F5E5C; background: var(--card); cursor: pointer; display: grid; place-items: center; color: transparent; font-size: 0.95rem; padding: 0; }
 .three li.done { opacity: 0.6; }
 .three li.done .t { text-decoration: line-through; }
 .three li.done .s { text-decoration: none; }
-.three li.done .tick { background: #1B2A4A; color: #fff; }
-.dot { width: 10px; height: 10px; border-radius: 50%; background: #F5B93E; }
-.act { font-family: var(--sans); font-size: 0.78rem; font-weight: 700; border: 0; border-radius: 999px; padding: 8px 14px; cursor: pointer; background: #1B2A4A; color: #fff; white-space: nowrap; }
-.act.ok { background: #E3F3EA; color: #1B2A4A; cursor: default; }
-.act.quiet { background: transparent; color: #8A5A00; border: 1.5px dashed #8A5A00; justify-self: start; margin-top: 12px; }
+.three li.done .tick { background: #1F5E5C; color: #fff; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: #D49B35; }
+.act { font-family: var(--sans); font-size: 0.78rem; font-weight: 700; border: 0; border-radius: 999px; padding: 8px 14px; cursor: pointer; background: #1F5E5C; color: #fff; white-space: nowrap; }
+.act.ok { background: #DDEBE9; color: #1F5E5C; cursor: default; }
+.act.quiet { background: transparent; color: #7A4F00; border: 1.5px dashed #7A4F00; justify-self: start; margin-top: 12px; }
 .filed { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.filed li { display: grid; gap: 2px; border-left: 3px solid #F5B93E; padding-left: 12px; }
-.filed .said { font-style: italic; font-size: 0.95rem; line-height: 1.35; }
+.filed li { display: grid; gap: 2px; border-left: 3px solid #D49B35; padding-left: 12px; }
+.filed .said { font-size: 0.95rem; line-height: 1.35; }
 .filed .went { font-size: 0.76rem; color: var(--ink-soft); }
 .plainlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 0.92rem; }
 .plainlist li { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; background: var(--paper); border-radius: 12px; padding: 10px 14px; }
-.plainlist em { font-style: normal; font-size: 0.78rem; color: #8A5A00; font-weight: 600; }
+.plainlist em { font-style: normal; font-size: 0.78rem; color: #7A4F00; font-weight: 600; }
 .rules { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 0.9rem; }
 .rules li { display: grid; gap: 2px; border-radius: 12px; padding: 10px 14px; }
-.rules li.ok { background: #E3F3EA; }
-.rules li.no { background: #FFF0D6; }
+.rules li.ok { background: #DDEBE9; }
+.rules li.no { background: #F8ECD2; }
 .rules b { font-weight: 700; }
 .demo-note { margin-top: 20px; font-size: 0.82rem; color: var(--ink-soft); max-width: none; }
 
@@ -181,7 +181,7 @@ a { color: var(--accent-deep); }
 .grid .card { gap: 8px; }
 .grid .e { width: 44px; height: 44px; border-radius: 14px; background: var(--accent-wash); display: grid; place-items: center; font-size: 1.3rem; margin-bottom: 8px; }
 .grid p { font-size: 0.98rem; color: var(--ink-soft); }
-.worries h3 { font-family: var(--serif); font-weight: 600; font-size: 1.35rem; line-height: 1.25; color: var(--accent); letter-spacing: 0; }
+.worries h3 { font-family: var(--serif); font-weight: 600; font-size: 1.35rem; line-height: 1.25; color: var(--accent-deep); letter-spacing: 0; }
 
 /* course */
 .sessions { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 16px; }
@@ -192,11 +192,11 @@ a { color: var(--accent-deep); }
 .facts { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
 .facts li { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 9px 18px; font-size: 0.95rem; font-weight: 500; }
 
-.fit { background: var(--green-wash); border-radius: 26px; padding: clamp(26px, 5vw, 44px); display: grid; gap: 16px; }
-.fit .tag { color: var(--green); }
+.fit { background: var(--slate-wash); border-radius: 26px; padding: clamp(26px, 5vw, 44px); display: grid; gap: 16px; }
+.fit .tag { color: var(--slate); }
 .fit ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; font-size: clamp(1.05rem, 3vw, 1.2rem); font-weight: 500; }
 .fit li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; }
-.fit li::before { content: "✓"; content: "✓" / ""; width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: #fff; display: grid; place-items: center; font-size: 0.85rem; font-weight: 700; }
+.fit li::before { content: "✓"; content: "✓" / ""; width: 28px; height: 28px; border-radius: 50%; background: var(--slate); color: #fff; display: grid; place-items: center; font-size: 0.85rem; font-weight: 700; }
 
 .close { background: var(--sun-wash); border-radius: 28px; padding: clamp(32px, 7vw, 64px); display: grid; gap: 18px; }
 .close p { font-size: clamp(1.1rem, 3.2vw, 1.3rem); }
@@ -219,7 +219,7 @@ a { color: var(--accent-deep); }
 
   <header class="col hero">
     <div class="eyebrow">A small-group course · By&nbsp;invitation</div>
-    <h1>Your energy belongs to the big decisions. <em>Build an assistant for the small ones.</em></h1>
+    <h1>Your energy belongs to the big decisions. <span class="sub">Build an assistant for the small ones.</span></h1>
     <ul class="wins">
       <li>Claims, calendars and filing, handled.</li>
       <li>More time for the people in your life.</li>
@@ -234,7 +234,7 @@ a { color: var(--accent-deep); }
       <div class="band-head">
         <div class="eyebrow">Tap around</div>
         <h2 id="demo-title">7am. Your day is already sorted.</h2>
-        <p class="brandnote">Yours can look however you like.</p>
+        <p class="brandnote">Your assistant can look however you like.</p>
       </div>
 
       <div class="demo">
