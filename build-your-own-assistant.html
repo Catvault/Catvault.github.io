@@ -142,8 +142,8 @@ a { color: var(--pink); }
 .gone { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
 .gone li { background: var(--card); border-radius: 999px; padding: 6px 16px; font-size: 0.98rem; font-weight: 600; color: var(--ink-soft); text-decoration: line-through; text-decoration-color: var(--amber); text-decoration-thickness: 2px; }
 
-.ratio { display: grid; grid-template-columns: 4fr 1fr; border-radius: 999px; overflow: hidden; font-weight: 700; font-size: clamp(0.95rem, 3.4vw, 1.25rem); }
-.ratio span { padding: 14px 6px 14px 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ratio { display: grid; grid-template-columns: minmax(max-content, 4fr) minmax(max-content, 1fr); border-radius: 999px; overflow: hidden; font-weight: 700; font-size: clamp(0.95rem, 3.4vw, 1.25rem); }
+.ratio span { padding: 14px 6px 14px 18px; white-space: nowrap; }
 .ratio .you { background: var(--amber); color: #fff; }
 .ratio .ai { background: var(--pink); color: #fff; padding: 14px 4px; text-align: center; }
 .worries b { font-style: italic; color: var(--pink); }
@@ -316,10 +316,10 @@ a { color: var(--pink); }
         <li>Calendar clashes</li>
         <li>Filing notes</li>
       </ul>
-      <div class="ratio" role="img" aria-label="About 80 percent you, which is the judgement, and 20 percent AI">
-        <span class="you">80% you · the judgement</span><span class="ai">20% AI</span>
+      <div class="ratio" role="img" aria-label="About 80 percent you, 20 percent AI">
+        <span class="you">80% you</span><span class="ai">20% AI</span>
       </div>
-      <p><strong>This is not AI writing your emails.</strong> Your voice stays yours.</p>
+      <p><strong>This is not AI writing your emails.</strong> Your voice and judgement stay yours.</p>
     </section>
 
     <section id="example">
@@ -435,7 +435,7 @@ a { color: var(--pink); }
 
     <section class="close" id="from-me">
       <h2><span class="icon">👋</span>If I can build this, you can.</h2>
-      <p>I'm Annie. I built mine with Claude. No coding needed, just a little time each week.</p>
+      <p>I'm Annie. I built mine with Claude. No coding needed.</p>
       <p class="ask">Want a seat? Tell the person who sent you this page.</p>
       <p class="sig">Annie</p>
     </section>
